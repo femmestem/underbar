@@ -2,7 +2,12 @@ var _ = require('underscore');
 var sinon = require('sinon');
 
 var delay = function(func, wait) {
-    // your code here
+  var args = Array.prototype.slice.call(arguments).slice(2);
+  if (args.length > 0) {
+    setTimeout(function() { func.apply(this, args); }, wait);
+  } else {
+    setTimeout(function() { func(); }, wait);
+  }
 };
 
 var clock;

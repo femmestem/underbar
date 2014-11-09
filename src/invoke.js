@@ -1,13 +1,16 @@
 var _ = require('underscore');
 
 var invoke = function(collection, functionOrKey, args) {
-    // your code here
+  var isFunction = functionOrKey.toString() !== functionOrKey;
+  return _.map(collection, function(item) {
+    return isFunction ? functionOrKey.apply(item) : item[functionOrKey].apply(item);
+  });
 };
 
 // when provided a func ref
 // runs the input function on each item in the array, and returns a list of results
 var reverse = function(){
-    return this.split('').reverse().join('');
+  return this.split('').reverse().join('');
 };
 
 var _reversedStrings = _.invoke(['dog', 'cat'], reverse);
