@@ -1,0 +1,19 @@
+{
+  "name": "underbar",
+  "version": "1.0.0",
+  "description": "JavaScript exercise on implementing and using Underscore methods",
+  "main": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/femmestem/underbar.git"
+  },
+  "keywords": [
+    "Underscore"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/femmestem/underbar",
+  "dependencies": {
+    "sinon": "^1.11.1",
+    "underscore": "^1.7.0"
+  }
+}
